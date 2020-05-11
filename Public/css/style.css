@@ -1,0 +1,211 @@
+
+body {
+    background-color: rgb(182, 182, 182);
+}
+
+.block {
+    color: black;
+    font-size: 15px;
+    text-align: end;
+    margin-right: 15px;
+}
+
+.bg-modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 1;
+}
+
+.modal-content {
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid black;
+    position: relative;
+    margin-top: 10px;
+}
+
+#submitButton {
+    background-color: blue;
+    border: 2px solid black;
+    color: white;
+    padding: 8px;
+    border-radius: 20px;
+
+}
+#newAccount {
+    margin: 10px;
+
+}
+
+.form-row {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+}
+
+#inputName {
+    width: 300px;
+    border: 2px solid gray;
+    text-align: center;
+    margin: 5px;
+}
+
+#inputEmail {
+    width: 300px;
+    border: 2px solid gray;
+    text-align: center;
+    margin: 5px;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.register {
+    color:black;
+    text-align: center;
+    font-size: 22px;
+    width: 100%;
+    height: auto;
+}
+
+#regButton {
+    background-color: blue;
+    border: 2px solid black;
+    color: white;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+#message {
+    border: 2px solid black;
+    color: black;
+    width: 25%;
+    height: auto;
+    text-align: center;
+    background-color: white;
+    margin: auto;
+}
+
+
+#message>p {
+    font-size: 15px;
+    color: red;
+ 
+}
+#forecast {
+    width: 20%;
+    height: auto;
+    float: left; 
+    position: fixed;
+    left: 6%;
+}
+h3 {
+    margin-left: 10px;
+    font-size: 30px;
+}
+#map{
+    float: right;
+    height: 40%;
+    width: 80%;
+}
+html, body {
+   height: 100%;
+   margin: 0;
+   /* padding: 1rem; */
+ }
+
+#createPost {
+    background-color: lightblue;
+    padding: 10px;
+}
+
+#createPostArea {
+    margin-left: 30px;
+}
+.welcome {
+   font-size: x-large;
+   text-align: center;
+
+}
+
+.indexp{
+    width: 75%;
+    float:right;
+}
+
+#allPosts {
+    width: 80%;
+    float: right;
+}
+
+#singlePost {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#postBody {
+    
+}
+
+#postImage {
+    width: 20rem;
+    height: 20rem;
+    padding: 20px;
+}
+
+#postTitle {
+    font-size: 2.5em;
+}
+
+#allPostsHeader {
+    font-size: 4em;
+}
+
+#title {
+    border-radius: 4px;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+#body {
+    border-radius: 4px;
+    width: 80%;
+    height: 30rem;
+    margin-bottom: 20px;
+}
+
+#zipCode {
+    border-radius: 4px;
+    margin-top: 30px;
+}
+
+#titleHeading {
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.inputAreaLabel {
+    margin-bottom: 5px;
+}
+
+#fileDescription {
+    width: 60%;
+    border-radius: 4px;
+}

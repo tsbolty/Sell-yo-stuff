@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOW YOUR SALE</title>
+
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+    <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+        <div class="flex items-center flex-shrink-0 text-black mr-6">
+          <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
+          <span class="font-semibold text-xl tracking-tight id=header">Find that GARAGE</span>
+        </div>
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+          <div class="text-sm lg:flex-grow">
+            <a href="index.html" id="homeButton" class="block mt-4 lg:inline-block lg:mt-0 text-black-400 hover:text-white mr-4">
+              HOME
+            </a>
+            <a href="createPost.html" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-white mr-4">
+              CREATE A POST
+            </a>
+            <button id="viewPostButton" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-white">
+              VIEW POST
+            </button>
+          </div>
+          <div>
+            <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-black hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0" id="loginButton">Login</a>
+          </div>
+        </div>
+      </nav>
+      <div id = "createPostArea">
+        <h4 id="titleHeading" class= "inputAreaLabel">Title</h4>
+        <input id = "title" placeholder= "title">
+        <h4 class= "inputAreaLabel">Description</h4>
+        <textarea id = "body" rows="50" placeholder= "body"></textarea>
+        <h5 class= "inputAreaLabel">Zip Code</h5>
+        <input id = "zip" placeholder= "zip code">
+        <br>
+        <br>
+        <br>
+        <form id="uploadForm" enctype="multipart/form-data">
+          <label class= "inputAreaLabel" for="description">Image Description:</label>
+          <br>
+          <input id="fileDescription" type="text" name="description" placeholder="File Description" id="description" />
+          <br>
+          <br>
+
+          <!-- the name attribute here ('upload') must match the key following 'req.files' in your back-end route! -->
+          <label class= "inputAreaLabel" for="upload">Upload File:</label>
+          <br>
+          <br>
+          <input class= "inputAreaLabel" type="file" name="upload" id="upload" />
+          <br>
+
+          <input type="submit" value="Upload File" id="submitUpload" />
+        </form>
+        <br>
+        <button id = "createPost">Create Post</button>
+      </div>
+    
+      <div class="bg-modal">
+          <div class="modal-content">
+            <div class="close">+</div>
+
+            <img src="https://seedandstock.com/images/SignIn.png" alt="loginPhoto" height="100" width="100">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="Name" class="form-control" id="loginEmail" placeholder="Email">
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                </div>
+                <br>
+            </div>
+            <button id="submitButton" class="button">Submit</button>
+            <br>
+            <p1>Don't have an account yet!</p1> <a href="createAccount.html" id="newAccount"><span style="color: red">Start Here!</span></a>
+        </div>
+    </div>
+      
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/createpost.js"></script>
+    <script src="./js/apicalls.js"></script>
+    <script>
+        document.getElementById("loginButton").addEventListener("click", function() {
+            document.querySelector(".bg-modal").style.display = "flex";
+        });
+
+        document.querySelector(".close").addEventListener("click", function() {
+            document.querySelector(".bg-modal").style.display = "none";
+        });
+    </script>
+    </body>
+</html>
