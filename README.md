@@ -10,6 +10,7 @@ This application will allow a user to view local garage sales in their area. If 
 * Jquery
 * HTML
 * CSS
+* AWS S3
 * Open Weather API
 * Google Mape API
 * MySQL
