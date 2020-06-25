@@ -54,13 +54,14 @@ $("#createPost").on("click", function(event){
             data: post
         }).then(function(){
             alert("Successfully created post");
-        }).then(
-            $.ajax("/api/posts", {
-                method: "GET"
+        }).catch(err => alert("You must be signed in to create a post"))
+            .then(
+                $.ajax("/api/posts", {
+                    method: "GET"
+                })
+            ).then(res=>{
+                res.redirect("/viewPost");
             })
-        ).then(res=>{
-            res.redirect("/viewPost");
-        });
     });
 
 });
